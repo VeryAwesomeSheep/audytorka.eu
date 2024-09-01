@@ -252,6 +252,38 @@
     color: var(--light);
 }
 
+.background-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust height as needed */
+    background-image: url(../img/background-drawing.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.text-container {
+    position: relative;
+    z-index: 1;
+    color: white;
+    max-width: 800px; /* Adjust max-width as needed */
+    margin: 0 auto;
+}
+
+.background-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust overlay color and opacity as needed */
+    z-index: 0;
+}
 
 /*** Section Title ***/
 .section-title h1 {
